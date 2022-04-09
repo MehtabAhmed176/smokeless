@@ -9,7 +9,7 @@ import DetailPage from "./components/detail-page/DetailPage";
 function App() {
   const history = useHistory()
   const [locations, setLocation] = useState([]);
-  const [value, setValue] = useState({ id: "1", name: "", location: "", sort:"" });
+  const [value, setValue] = useState({ id: "1", name: "clean", location: "munich", sort:"" });
   const handleChange = (e) => setValue({ ...value, [e.target.name]: e.target.value })
   const handleSubmit = () => {
     console.log("submit is working..." );

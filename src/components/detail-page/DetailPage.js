@@ -1,8 +1,20 @@
-import { useHistory } from "react-router-dom";
-
+import { useHistory, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
 function DetailPage() {
   const history = useHistory();
-  const handleClick = () => history.push('/');
+  const location = useLocation();
+  
+  const handleClick = () => history.push("/");
+  const [detail, setDetail] = useState({
+    id: "",
+    name: "",
+    location: "",
+  });
+ useEffect(() => {
+  console.log('location object', location)
+  }, [location]);
+
   return (
     <div>
       <div>
@@ -11,6 +23,9 @@ function DetailPage() {
           onClick={handleClick}>
           Back
         </button>
+      </div>
+      <div>
+        {JSON.stringify(location?.state)}
       </div>
       I am detail Page
     </div>

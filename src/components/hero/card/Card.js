@@ -1,13 +1,13 @@
 
-function Card({ id, name, location,handleDetailPage }) {
+function Card({ id, name, location,handlePageDetail }) {
   return (
-    <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" key={id} onClick={(item)=>handleDetailPage(id)}>
-
+    <div className="sm:p-5 bg-pink rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" key={id} onClick={handlePageDetail}>
+{/* @todo apply text-heading to Buyild your ICe Cream */}
     <div className="p-5">
         <a href="#">
-          <h6 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h6>
+          <h6 class="mb-2 text-white  text-xl font-extrabold ">{name}</h6>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> {location}</p>
+        <p class="mb-3 font-normal text-15 text-white leading-5"> {location}</p>
 
     </div>
 </div>
