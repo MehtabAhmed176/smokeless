@@ -2,11 +2,11 @@ import BackButton from "./back-button/BackButton";
 import Input from "./input/Input";
 import SaveButton from "./save-button/SaveButton";
 
-function AddLocation({ handleClick, handleSubmit, formData, handleChange }) {
+function AddLocation({ handleSubmit, formData, handleChange }) {
   return (
     <div className="container mx-auto bg-cindigo sm:max-w-5xl sm:mx-60 lg:mx-96">
       <div className="p-5">
-      <BackButton />
+        <BackButton />
         <div className="flex flex-col h-screen">
           <div>
             <Input formData={formData} handleChange={handleChange} />

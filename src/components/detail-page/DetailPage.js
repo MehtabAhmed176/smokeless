@@ -3,12 +3,12 @@ import { useEffect } from "react";
 import arrowLeft from "./../../images/arrow_left@3x.png";
 function DetailPage() {
   const history = useHistory();
-  const location = useLocation();
+  const singleLocation = useLocation();
 
   const handleClick = () => history.push("/");
   useEffect(() => {
-    console.log("location object", location);
-  }, [location]);
+    console.log("location object", singleLocation);
+  }, [singleLocation]);
 
   return (
     <div className="container p-5 mx-auto bg-cindigo h-screen sm:max-w-5xl sm:mx-60 lg:mx-96">
@@ -19,20 +19,12 @@ function DetailPage() {
           <img src={arrowLeft} class="max-w-full flex" alt="..." />
         </div>
         <div className="flex flex-col"></div>
-
-        {/* Experiment */}
-        <p class="text-white font-bold text-2xl">Name of the ICECREAM MAKER</p>
-        <p class="text-white text-xl">Munich</p>
+        <p class="text-white font-bold text-2xl">{singleLocation.state.name}</p>
+        <p class="text-white text-xl">{singleLocation.state.location}</p>
         <ul class="list-disc">
-          <li className="text-white ml-5">
-           Flavor
-          </li>
-          <li className="text-white ml-5">
-           Flavor
-          </li>
-          <li className="text-white ml-5">
-           Flavor
-          </li>
+          {singleLocation?.state?.sort?.split(",")?.map((item) => (
+            <li className="text-white ml-5">{item}</li>
+          ))}
         </ul>
       </div>
     </div>

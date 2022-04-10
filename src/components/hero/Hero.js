@@ -7,8 +7,13 @@ function Hero({ locations }) {
   const handleDetailPage = (item) => {
     console.log("item on click isss", item);
     history.push({
-      pathname: `detailpage/${1}/`,
-      state: { id: "12e22", name: "kabeer", location: "lahore" },
+      pathname: `detailpage/${item.id}/`,
+      state: {
+        id: item.id,
+        name: item.name,
+        location: item.location,
+        sort: item.sort,
+      },
     });
   };
   const list = locations.map((item) => {
@@ -25,19 +30,23 @@ function Hero({ locations }) {
   });
   return (
     <div class="flex flex-col flex-wrap justify-center md:max-w-5xl md:mx-60 lg:mx-96">
-     
-     
       <div className="relative">
-        <div className="bg-no-repeat bg-center h-60 bg-cover" style={{ backgroundImage: `url(${background})` }}>
+        <div
+          className="bg-no-repeat bg-center h-60 bg-cover"
+          style={{ backgroundImage: `url(${background})` }}>
           <div className="flex justify-center">
-          <p class="text-white font-bold text-2xl  pt-25 absolute uppercase w-72 text-center" style={{top:"45%"}}>Build up your icecream Universe</p>
+            <p
+              class="text-white font-bold text-2xl  pt-25 absolute uppercase w-72 text-center"
+              style={{ top: "45%" }}>
+              Build up your icecream Universe
+            </p>
           </div>
-      
         </div>
       </div>
-     
-      <div className="">{list}</div>
-      <Button />
+      <div className="m-3">{list}</div>
+      <div className="mx-3 mb-3">
+        <Button />
+      </div>
     </div>
   );
 }
