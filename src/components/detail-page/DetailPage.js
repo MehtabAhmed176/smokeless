@@ -1,33 +1,40 @@
 import { useHistory, useLocation } from "react-router-dom";
-import { useState } from "react";
 import { useEffect } from "react";
+import arrowLeft from "./../../images/arrow_left@3x.png";
 function DetailPage() {
   const history = useHistory();
   const location = useLocation();
-  
+
   const handleClick = () => history.push("/");
-  const [detail, setDetail] = useState({
-    id: "",
-    name: "",
-    location: "",
-  });
- useEffect(() => {
-  console.log('location object', location)
+  useEffect(() => {
+    console.log("location object", location);
   }, [location]);
 
   return (
-    <div>
+    <div className="container p-5 mx-auto bg-cindigo h-screen sm:max-w-5xl sm:mx-60 lg:mx-96">
       <div>
-        <button
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex"
+        <div
+          class="rounded-full flex items-center justify-center bg-white mb-5 h-12 w-12"
           onClick={handleClick}>
-          Back
-        </button>
+          <img src={arrowLeft} class="max-w-full flex" alt="..." />
+        </div>
+        <div className="flex flex-col"></div>
+
+        {/* Experiment */}
+        <p class="text-white font-bold text-2xl">Name of the ICECREAM MAKER</p>
+        <p class="text-white text-xl">Munich</p>
+        <ul class="list-disc">
+          <li className="text-white ml-5">
+           Flavor
+          </li>
+          <li className="text-white ml-5">
+           Flavor
+          </li>
+          <li className="text-white ml-5">
+           Flavor
+          </li>
+        </ul>
       </div>
-      <div>
-        {JSON.stringify(location?.state)}
-      </div>
-      I am detail Page
     </div>
   );
 }

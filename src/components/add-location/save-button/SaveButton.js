@@ -1,7 +1,7 @@
 function SaveButton({handleSubmit,handleClick}) {
   return (
     <div>
-      <button class="w-full h-12 px-6 text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800" onClick={handleSubmit}>
+      <button class="text-pink hover:bg-dblue h-12 bg-white font-extrabold w-full rounded-full py-1 p-2.5 uppercase " onClick={handleSubmit}>
         Save
       </button>
     </div>

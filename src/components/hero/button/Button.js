@@ -6,7 +6,7 @@ function Button() {
     }
   return (
     <div>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded" onClick={handleClick}>
+      <button class="bg-cblue hover:bg-dblue h-12 text-white font-extrabold w-full rounded-full py-1 p-2.5 uppercase" onClick={handleClick}>
         Add Location
       </button>
     </div>
