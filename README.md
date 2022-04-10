@@ -33,3 +33,6 @@ Open https://mehtabahmed176.github.io/smokeless/#/
 ### Note
 There is some already prefilled data in the form feilds to make the testing easy
 The app is responsive and below are the two mobile screens(screen for list all icecream and add new location screen)
+
+![finalmobile](https://user-images.githubusercontent.com/50609696/162640557-93c2838b-8c11-49c2-9889-b0f92e46c700.png)
+![addnewloc](https://user-images.githubusercontent.com/50609696/162640561-2e81f2b7-bfd0-49a8-9813-7d119fb73102.png)
